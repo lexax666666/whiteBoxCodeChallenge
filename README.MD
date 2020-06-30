@@ -15,7 +15,7 @@ takes longer to build. Retry logic is implemented in index.js to connect to data
 
 ## Output
 
-Output File should be located in the node folder
+Output File should be located in the node folder as "out.xlsx"
 
 ## Cleaning up
 
