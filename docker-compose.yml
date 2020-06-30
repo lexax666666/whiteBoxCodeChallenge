@@ -1,0 +1,26 @@
+    
+version: '3'
+
+services:
+  db:
+    build: ./db
+    environment:
+      MYSQL_DATABASE: whitebox
+      MYSQL_ROOT_PASSWORD: supersecret
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: supersecret
+      DATABASE_HOST: db
+  node:
+    build: ./node
+    environment:
+      DATABASE_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: whitebox
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: supersecret
+    volumes:
+      - "./node:/app/"
+      - "/app/node_modules"
+    depends_on:
+      - db
+    restart: on-failure 
