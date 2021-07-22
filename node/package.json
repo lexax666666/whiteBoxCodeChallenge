@@ -12,6 +12,6 @@
   "dependencies": {
     "mysql2": "^2.1.0",
     "sqlpivot": "^0.1.4",
-    "xlsx": "^0.16.2"
+    "xlsx": "^0.17.0"
   }
 }
